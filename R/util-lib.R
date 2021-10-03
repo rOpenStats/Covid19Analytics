@@ -223,6 +223,7 @@ getEnv <- function(variable.name, package.prefix = getPackagePrefix(),
 
 
 #' generateSticker
+#' @import ggpubr
 #' @noRd
 generateSticker <- function(){
   #library(hexSticker)
