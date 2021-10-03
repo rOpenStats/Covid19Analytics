@@ -1,0 +1,64 @@
+Package: COVID19analytics
+Type: Package
+Title: COVID-19 data processing
+Version: 0.2.2
+Language: en-US
+Authors@R: c(
+    person("Alejandro", "Baranek",,"abaranek@dc.uba.ar", c("aut","com","cre", "cph")),
+    person("Yanchang Zhao",, "yanchang@RDataMining.com", c("cph")),
+    person("Tao",, "", c("cph")))
+Maintainer: Alejandro Baranek <abaranek@dc.uba.ar>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: NO
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat, 
+    reprex,
+    hexSticker
+VignetteBuilder: knitr
+Depends: R (>= 3.5.0)
+Imports: magrittr,
+         dplyr,
+         tidyr,
+         countrycode,
+         lubridate,
+         tidyverse,
+         gridExtra,
+         kableExtra,
+         mgcv,
+         scam,
+         R6,
+         TTR,
+         units,
+         RColorBrewer,
+         forcats,
+         scales,
+         ggplot2,
+         ggrepel,
+         plotly,
+         zoo,
+         lgr,
+         readr,
+         pkgdown,
+         covr,
+         testthat,
+         vdiffr
+Collate:
+  'util-lib.R'
+  'COVID19DataProcessor.R'
+  'COVID19DataProviderJHU.R'
+  'COVID19DataProviderOWID.R'
+  'COVID19DataModel.R'
+  'COVID19DataComparison.R'
+  'COVID19MissingValuesImputation.R'
+  'report-lib.R'
+  'test-lib.R'
+  'zzz.R'
+BugReports: https://github.com/kenarab/COVID19analytics/issues
+URL: https://github.com/kenarab/COVID19analytics
+StagedInstall: FALSE

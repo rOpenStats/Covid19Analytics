@@ -1,0 +1,17 @@
+^CRAN-RELEASE$
+^doc$
+^codemeta\.json$
+^CONTRIBUTING\.md$
+^CODE_OF_CONDUCT.md$
+^Meta$
+^.*\.Rproj$
+^\.Rproj\.user$
+^.travis.yml$
+^.lintr$
+^docs
+^doc
+^cran-comments\.md$
+^inst\extdata\.tmp$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
