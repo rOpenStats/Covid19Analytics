@@ -87,7 +87,7 @@ lgr::threshold("info", lgr::get_logger("COVID19ARCurator"))
 ```
 
 ```{r, load-processor}
-osdata.processor <- COVID19DataProcessor$new(provider = "JohnsHopkingsUniversity", missing.values = "imputation")
+data.processor <- COVID19DataProcessor$new(provider = "JohnsHopkingsUniversity", missing.values = "imputation")
 
 #dummy <- data.processor$preprocess() is setupData + transform is the preprocess made by data provider
 dummy <- data.processor$setupData()
