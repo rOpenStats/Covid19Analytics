@@ -19,8 +19,7 @@ Suggests:
     rmarkdown,
     testthat, 
     reprex,
-    hexSticker,
-    ggpubr
+    hexSticker
 VignetteBuilder: knitr
 Depends: R (>= 3.5.0)
 Imports: magrittr,
@@ -48,7 +47,8 @@ Imports: magrittr,
          pkgdown,
          covr,
          testthat,
-         vdiffr
+         vdiffr,
+         ggpubr
 Collate:
   'util-lib.R'
   'COVID19DataProcessor.R'
