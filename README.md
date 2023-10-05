@@ -107,35 +107,35 @@ data.processor <- COVID19DataProcessor$new(provider = "JohnsHopkingsUniversity",
 
 #dummy <- data.processor$preprocess() is setupData + transform is the preprocess made by data provider
 dummy <- data.processor$setupData()
-#> INFO  [07:03:01.076]  {stage: `processor-setup`}
-#> INFO  [07:03:01.182] Checking required downloaded  {downloaded.max.date: `2023-03-09`, daily.update.time: `21:00:00`, current.datetime: `2023-10-04 07:03:01.181488`, download.flag: `TRUE`}
-#> INFO  [07:03:04.570] Checking required downloaded  {downloaded.max.date: `2023-03-09`, daily.update.time: `21:00:00`, current.datetime: `2023-10-04 07:03:04.558271`, download.flag: `TRUE`}
-#> INFO  [07:03:06.736] Checking required downloaded  {downloaded.max.date: `2023-03-09`, daily.update.time: `21:00:00`, current.datetime: `2023-10-04 07:03:06.734871`, download.flag: `TRUE`}
-#> INFO  [07:03:08.655]  {stage: `data loaded`}
-#> INFO  [07:03:08.655]  {stage: `data-setup`}
+#> INFO  [08:01:40.259]  {stage: `processor-setup`}
+#> INFO  [08:01:40.402] Checking required downloaded  {downloaded.max.date: `2023-03-09`, daily.update.time: `21:00:00`, current.datetime: `2023-10-05 08:01:40.401277`, download.flag: `TRUE`}
+#> INFO  [08:01:43.807] Checking required downloaded  {downloaded.max.date: `2023-03-09`, daily.update.time: `21:00:00`, current.datetime: `2023-10-05 08:01:43.789436`, download.flag: `TRUE`}
+#> INFO  [08:01:45.280] Checking required downloaded  {downloaded.max.date: `2023-03-09`, daily.update.time: `21:00:00`, current.datetime: `2023-10-05 08:01:45.279924`, download.flag: `TRUE`}
+#> INFO  [08:01:48.840]  {stage: `data loaded`}
+#> INFO  [08:01:48.841]  {stage: `data-setup`}
 dummy <- data.processor$transform()
-#> INFO  [07:03:08.657] Executing transform
-#> INFO  [07:03:08.658] Executing consolidate
-#> INFO  [07:03:20.051]  {stage: `consolidated`}
-#> INFO  [07:03:20.053] Executing standarize
-#> INFO  [07:03:20.913] gathering DataModel
-#> INFO  [07:03:20.914]  {stage: `datamodel-setup`}
+#> INFO  [08:01:48.842] Executing transform
+#> INFO  [08:01:48.842] Executing consolidate
+#> INFO  [08:02:00.709]  {stage: `consolidated`}
+#> INFO  [08:02:00.711] Executing standarize
+#> INFO  [08:02:01.973] gathering DataModel
+#> INFO  [08:02:01.974]  {stage: `datamodel-setup`}
 # Curate is the process made by missing values method
 dummy <- data.processor$curate()
-#> INFO  [07:03:20.917]  {stage: `loading-aggregated-data-model`}
+#> INFO  [08:02:01.979]  {stage: `loading-aggregated-data-model`}
 #> Warning: Some values were not matched unambiguously: Antarctica
 #> Warning: Some values were not matched unambiguously: Micronesia
 #> Warning: Some values were not matched unambiguously: MS Zaandam
 #> Warning: Some values were not matched unambiguously: Summer Olympics 2020
 #> Warning: Some values were not matched unambiguously: Winter Olympics 2022
-#> INFO  [07:03:22.783]  {stage: `calculating-rates`}
-#> INFO  [07:03:22.877]  {stage: `making-data-comparison`}
-#> INFO  [07:03:26.702]  {stage: `applying-missing-values-method`}
-#> INFO  [07:03:26.703]  {stage: `Starting first imputation`}
-#> INFO  [07:03:26.710]  {stage: `calculating-rates`}
-#> INFO  [07:03:26.827]  {stage: `making-data-comparison-2`}
-#> INFO  [07:03:30.655]  {stage: `calculating-top-countries`}
-#> INFO  [07:03:30.669]  {stage: `curated`}
+#> INFO  [08:02:04.136]  {stage: `calculating-rates`}
+#> INFO  [08:02:04.227]  {stage: `making-data-comparison`}
+#> INFO  [08:02:08.243]  {stage: `applying-missing-values-method`}
+#> INFO  [08:02:08.245]  {stage: `Starting first imputation`}
+#> INFO  [08:02:08.250]  {stage: `calculating-rates`}
+#> INFO  [08:02:08.384]  {stage: `making-data-comparison-2`}
+#> INFO  [08:02:12.667]  {stage: `calculating-top-countries`}
+#> INFO  [08:02:12.684]  {stage: `curated`}
 
 current.date <- max(data.processor$getData()$date)
 
