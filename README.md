@@ -107,35 +107,35 @@ data.processor <- COVID19DataProcessor$new(provider = "JohnsHopkingsUniversity",
 
 #dummy <- data.processor$preprocess() is setupData + transform is the preprocess made by data provider
 dummy <- data.processor$setupData()
-#> INFO  [08:46:58.771]  {stage: `processor-setup`}
-#> INFO  [08:46:58.880] Checking required downloaded  {downloaded.max.date: `2023-03-09`, daily.update.time: `21:00:00`, current.datetime: `2023-10-16 08:46:58.879684`, download.flag: `TRUE`}
-#> INFO  [08:47:04.192] Checking required downloaded  {downloaded.max.date: `2023-03-09`, daily.update.time: `21:00:00`, current.datetime: `2023-10-16 08:47:04.179651`, download.flag: `TRUE`}
-#> INFO  [08:47:08.489] Checking required downloaded  {downloaded.max.date: `2023-03-09`, daily.update.time: `21:00:00`, current.datetime: `2023-10-16 08:47:08.488199`, download.flag: `TRUE`}
-#> INFO  [08:47:11.844]  {stage: `data loaded`}
-#> INFO  [08:47:11.846]  {stage: `data-setup`}
+#> INFO  [16:28:05.998]  {stage: `processor-setup`}
+#> INFO  [16:28:06.109] Checking required downloaded  {downloaded.max.date: `2023-03-09`, daily.update.time: `21:00:00`, current.datetime: `2023-10-17 16:28:06.108596`, download.flag: `TRUE`}
+#> INFO  [16:28:07.324] Checking required downloaded  {downloaded.max.date: `2023-03-09`, daily.update.time: `21:00:00`, current.datetime: `2023-10-17 16:28:07.307321`, download.flag: `TRUE`}
+#> INFO  [16:28:08.353] Checking required downloaded  {downloaded.max.date: `2023-03-09`, daily.update.time: `21:00:00`, current.datetime: `2023-10-17 16:28:08.353184`, download.flag: `TRUE`}
+#> INFO  [16:28:10.998]  {stage: `data loaded`}
+#> INFO  [16:28:10.999]  {stage: `data-setup`}
 dummy <- data.processor$transform()
-#> INFO  [08:47:11.847] Executing transform
-#> INFO  [08:47:11.848] Executing consolidate
-#> INFO  [08:47:22.996]  {stage: `consolidated`}
-#> INFO  [08:47:22.998] Executing standarize
-#> INFO  [08:47:23.832] gathering DataModel
-#> INFO  [08:47:23.833]  {stage: `datamodel-setup`}
+#> INFO  [16:28:11.001] Executing transform
+#> INFO  [16:28:11.001] Executing consolidate
+#> INFO  [16:28:22.302]  {stage: `consolidated`}
+#> INFO  [16:28:22.304] Executing standarize
+#> INFO  [16:28:23.208] gathering DataModel
+#> INFO  [16:28:23.210]  {stage: `datamodel-setup`}
 # Curate is the process made by missing values method
 dummy <- data.processor$curate()
-#> INFO  [08:47:23.837]  {stage: `loading-aggregated-data-model`}
+#> INFO  [16:28:23.216]  {stage: `loading-aggregated-data-model`}
 #> Warning: Some values were not matched unambiguously: Antarctica
 #> Warning: Some values were not matched unambiguously: Micronesia
 #> Warning: Some values were not matched unambiguously: MS Zaandam
 #> Warning: Some values were not matched unambiguously: Summer Olympics 2020
 #> Warning: Some values were not matched unambiguously: Winter Olympics 2022
-#> INFO  [08:47:25.606]  {stage: `calculating-rates`}
-#> INFO  [08:47:25.697]  {stage: `making-data-comparison`}
-#> INFO  [08:47:29.602]  {stage: `applying-missing-values-method`}
-#> INFO  [08:47:29.603]  {stage: `Starting first imputation`}
-#> INFO  [08:47:29.609]  {stage: `calculating-rates`}
-#> INFO  [08:47:29.731]  {stage: `making-data-comparison-2`}
-#> INFO  [08:47:33.423]  {stage: `calculating-top-countries`}
-#> INFO  [08:47:33.436]  {stage: `curated`}
+#> INFO  [16:28:25.115]  {stage: `calculating-rates`}
+#> INFO  [16:28:25.206]  {stage: `making-data-comparison`}
+#> INFO  [16:28:29.061]  {stage: `applying-missing-values-method`}
+#> INFO  [16:28:29.063]  {stage: `Starting first imputation`}
+#> INFO  [16:28:29.069]  {stage: `calculating-rates`}
+#> INFO  [16:28:29.183]  {stage: `making-data-comparison-2`}
+#> INFO  [16:28:33.325]  {stage: `calculating-top-countries`}
+#> INFO  [16:28:33.341]  {stage: `curated`}
 
 current.date <- max(data.processor$getData()$date)
 
@@ -215,7 +215,7 @@ rc$ggplotComparisonExponentialGrowth(included.countries = latam.countries, count
                                      field = "remaining.confirmed", y.label = "Active cases", min.cases = 100)
 #> Warning in self$trans$transform(x): NaNs produced
 #> Warning: Transformation introduced infinite values in continuous y-axis
-#> Warning: ggrepel: 7 unlabeled data points (too many overlaps). Consider
+#> Warning: ggrepel: 5 unlabeled data points (too many overlaps). Consider
 #> increasing max.overlaps
 ```
 
@@ -362,7 +362,7 @@ rg$ggplotCountriesLines(field = "rate.inc.daily", log.scale = TRUE)
 #> Warning: Transformation introduced infinite values in continuous y-axis
 #> Warning: Removed 176 rows containing missing values (`geom_line()`).
 #> Warning: Removed 1 rows containing missing values (`geom_text_repel()`).
-#> Warning: ggrepel: 5 unlabeled data points (too many overlaps). Consider
+#> Warning: ggrepel: 4 unlabeled data points (too many overlaps). Consider
 #> increasing max.overlaps
 ```
 
